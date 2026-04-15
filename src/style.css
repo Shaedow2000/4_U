@@ -12,7 +12,10 @@
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 .center {
-  @apply w-20 h-20 bg-amber-300 rounded-full relative;
+  @apply w-20 h-20 bg-amber-300 rounded-full relative z-50;
+}
+.petal {
+  @apply h-40 w-20 rounded-t-full absolute bottom-1/2 bg-linear-0 from-pink-800 to-pink-400 z-20;
 }
 
 @keyframes bloom {
