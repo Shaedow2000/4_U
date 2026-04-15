@@ -7,3 +7,18 @@
 #github {
   @apply w-10 h-10 fill-gray-500 absolute z-30 bottom-2 right-2 cursor-pointer;
 }
+
+.flower {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+.center {
+  @apply w-20 h-20 bg-amber-300 rounded-full relative;
+}
+.petal {
+  @apply h-40 w-20 rounded-tr-4xl absolute bottom-1/2;
+}
+
+@keyframes bloom {
+  from {
+  }
+}

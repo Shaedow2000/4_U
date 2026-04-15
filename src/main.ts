@@ -7,8 +7,8 @@ const petal: string = /* html */ `
 `;
 
 app.innerHTML = /* html */ `
-  <div id="flower" class="h-fit w-fit">
-    <div id="center"></div>
+  <div class="flower">
+    <div class="center"></div>
     ${petal.repeat(12)}
   </div>
   ${githubSVG}
