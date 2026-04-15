@@ -14,9 +14,6 @@
 .center {
   @apply w-20 h-20 bg-amber-300 rounded-full relative;
 }
-.petal {
-  @apply h-40 w-20 rounded-tr-4xl absolute bottom-1/2;
-}
 
 @keyframes bloom {
   from {
