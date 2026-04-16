@@ -13,7 +13,14 @@ const redirect_to_GH: Function = (): void => {
 };
 
 const screen_tap: Function = (message_count: number): void => {
-  if (message_count >= messages.length) {
+  if (message_count === messages.length - 1) {
+    document.getElementById("center")?.classList.add("animate-show");
+    document
+      .querySelectorAll(".petal")
+      .forEach((element: Element): void =>
+        element.classList.add("animate-bloom"),
+      );
+  } else if (message_count >= messages.length) {
     return;
   }
 

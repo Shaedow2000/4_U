@@ -46,7 +46,7 @@
 .flower {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
-.center {
+#center {
   @apply opacity-0 w-20 h-20 bg-radial from-yellow-200 to-yellow-600 rounded-full relative z-50;
 }
 .petal {

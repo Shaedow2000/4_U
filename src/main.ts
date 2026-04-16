@@ -11,7 +11,7 @@ animatePetals();
 
 app.innerHTML = /* html */ `
   <div class="flower">
-    <div class="center"></div>
+    <div id="center"></div>
     ${petal.repeat(12)}
   </div>
   <div id="messages-div"></div>
