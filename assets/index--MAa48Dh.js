@@ -2,6 +2,7 @@
     .petal:nth-child(${t+1}) {
       --rot: ${t*30}deg;
       animation-delay: ${(t+1)*.2}s
+      z-index: ${t+1}
     }
     `).join(``),t=document.createElement(`style`);t.textContent=e,document.head.appendChild(t)},n=document.getElementById(`app`);t(),n.innerHTML=`
   <div class="flower">
