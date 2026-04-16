@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-bloom: bloom 4s forwards;
+  --animate-bloom: bloom 5s forwards;
 
   @keyframes bloom {
     from {
@@ -9,7 +9,7 @@
       opacity: 0;
     }
     to {
-      transform: scale(1) rotate(--rot);
+      transform: scale(1) rotate(var(--rot));
       opacity: 1;
     }
   }
