@@ -1,3 +1,11 @@
+const messages: string[] = [
+  "You know",
+  "I always wanted to tell you something",
+  "But I didin't know how...",
+  "I reeeeeeally",
+  "love you <3",
+];
+
 const redirect_to_GH: Function = (): void => {
   document.getElementById("github")?.addEventListener("click", () => {
     location.href = "https://github.com/Shaedow2000/4_U";
@@ -5,17 +13,13 @@ const redirect_to_GH: Function = (): void => {
 };
 
 const screen_tap: Function = (message_count: number): void => {
+  if (message_count >= messages.length) {
+    return;
+  }
+
   const messages_div = document.getElementById(
     "messages-div",
   ) as HTMLDivElement;
-
-  const messages: string[] = [
-    "You know",
-    "I always wanted to tell you something",
-    "But I didin't know how...",
-    "I reeeeeeally",
-    "love you <3",
-  ];
 
   messages_div.innerHTML = "";
 
