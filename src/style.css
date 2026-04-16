@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
+
 @import "tailwindcss";
 
 @theme {
   --animate-bloom: bloom 5s forwards;
   --animate-show: show 3s forwards;
+
+  --font-borel: "Borel", cursive;
 
   @keyframes bloom {
     from {
@@ -32,11 +36,11 @@
 }
 
 #app {
-  @apply w-screen h-screen bg-radial from-black to-gray-900;
+  @apply font-borel w-screen h-screen bg-radial from-black to-gray-900;
 }
 
 #messages-div {
-  @apply absolute top-36 left-1/2 text-2xl text-white;
+  @apply text-2xl leading-10 w-fit absolute top-36 left-1/2 -translate-x-1/2 text-white text-center;
 }
 
 #github {

@@ -2,7 +2,7 @@ const messages: string[] = [
   "You know",
   "I always wanted to tell you something",
   "But I didin't know how...",
-  "I reeeeeeally",
+  "I just... reeeeeeally",
   "love you <3",
 ];
 
