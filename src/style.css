@@ -35,6 +35,10 @@
   @apply w-screen h-screen bg-radial from-black to-gray-900;
 }
 
+#messages-div {
+  @apply absolute top-36 left-1/2 text-2xl text-white;
+}
+
 #github {
   @apply w-10 h-10 fill-gray-500 absolute z-50 bottom-2 right-2 cursor-pointer;
 }
@@ -43,9 +47,9 @@
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 .center {
-  @apply opacity-0 animate-show w-20 h-20 bg-radial from-yellow-200 to-yellow-600 rounded-full relative z-50;
+  @apply opacity-0 w-20 h-20 bg-radial from-yellow-200 to-yellow-600 rounded-full relative z-50;
 }
 .petal {
-  @apply opacity-0 animate-bloom h-36 w-20 rounded-t-full absolute bottom-1/2 bg-linear-0 from-pink-800 to-pink-400;
+  @apply opacity-0 h-36 w-20 rounded-t-full absolute bottom-1/2 bg-linear-0 from-pink-800 to-pink-400;
   transform-origin: bottom center;
 }

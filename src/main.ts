@@ -8,14 +8,21 @@ const petal: string = /* html */ `
 `;
 
 animatePetals();
-screen_tap();
 
 app.innerHTML = /* html */ `
   <div class="flower">
     <div class="center"></div>
     ${petal.repeat(12)}
   </div>
+  <div id="messages-div"></div>
   ${githubSVG}
 `;
+
+let message_count: number = 0;
+
+document.getElementById("screen")?.addEventListener("click", (): void => {
+  screen_tap(message_count);
+  message_count++;
+});
 
 redirect_to_GH();
