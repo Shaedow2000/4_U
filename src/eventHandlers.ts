@@ -30,9 +30,20 @@ const screen_tap: Function = (message_count: number): void => {
 
   messages_div.innerHTML = "";
 
-  for (let i = 0; i < messages[message_count].length; i++) {
+  // for (let i = 0; i < messages[message_count].length; i++) {
+  //   messages_div.innerHTML += messages[message_count][i];
+  // }
+
+  let i: number = 0;
+
+  let write_message_interval: number = setInterval((): void => {
+    if (i === messages[message_count].length - 1) {
+      clearInterval(write_message_interval);
+    }
+
     messages_div.innerHTML += messages[message_count][i];
-  }
+    i++;
+  }, 100);
 };
 
 export { redirect_to_GH, screen_tap };
