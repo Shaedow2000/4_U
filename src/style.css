@@ -42,6 +42,6 @@
   @apply opacity-0 animate-show w-20 h-20 bg-radial from-yellow-200 to-yellow-600 rounded-full relative z-50;
 }
 .petal {
-  @apply opacity-0 animate-bloom h-36 w-20 rounded-t-full absolute bottom-1/2 bg-linear-0 from-pink-800 to-pink-400 z-20;
+  @apply opacity-0 animate-bloom h-36 w-20 rounded-t-full absolute bottom-1/2 bg-linear-0 from-pink-800 to-pink-400;
   transform-origin: bottom center;
 }
