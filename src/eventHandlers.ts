@@ -4,4 +4,10 @@ const redirect_to_GH: Function = (): void => {
   });
 };
 
-export { redirect_to_GH };
+const screen_tap: Function = (): void => {
+  document.getElementById("screen")?.addEventListener("click", (): void => {
+    console.log("clicked");
+  });
+};
+
+export { redirect_to_GH, screen_tap };

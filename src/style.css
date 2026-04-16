@@ -27,12 +27,16 @@
   }
 }
 
+#screen {
+  @apply w-screen h-screen absolute top-0 right-0 z-40;
+}
+
 #app {
   @apply w-screen h-screen bg-radial from-black to-gray-900;
 }
 
 #github {
-  @apply w-10 h-10 fill-gray-500 absolute z-30 bottom-2 right-2 cursor-pointer;
+  @apply w-10 h-10 fill-gray-500 absolute z-50 bottom-2 right-2 cursor-pointer;
 }
 
 .flower {

@@ -1,4 +1,4 @@
-import { redirect_to_GH } from "./eventHandlers";
+import { redirect_to_GH, screen_tap } from "./eventHandlers";
 import { animatePetals } from "./petalsAnimations";
 
 const app = document.getElementById("app") as HTMLDivElement;
@@ -8,6 +8,7 @@ const petal: string = /* html */ `
 `;
 
 animatePetals();
+screen_tap();
 
 app.innerHTML = /* html */ `
   <div class="flower">
