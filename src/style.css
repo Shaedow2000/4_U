@@ -2,6 +2,7 @@
 
 @theme {
   --animate-bloom: bloom 5s forwards;
+  --animate-show: show 3s forwards;
 
   @keyframes bloom {
     from {
@@ -10,6 +11,17 @@
     }
     to {
       transform: scale(1) rotate(var(--rot));
+      opacity: 1;
+    }
+  }
+
+  @keyframes show {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
       opacity: 1;
     }
   }
@@ -27,7 +39,7 @@
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 .center {
-  @apply w-20 h-20 bg-radial from-yellow-200 to-yellow-600 rounded-full relative z-50;
+  @apply opacity-0 animate-show w-20 h-20 bg-radial from-yellow-200 to-yellow-600 rounded-full relative z-50;
 }
 .petal {
   @apply opacity-0 animate-bloom h-36 w-20 rounded-t-full absolute bottom-1/2 bg-linear-0 from-pink-800 to-pink-400 z-20;
