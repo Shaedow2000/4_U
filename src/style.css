@@ -57,3 +57,7 @@
   @apply opacity-0 h-36 w-20 rounded-t-full absolute bottom-1/2 bg-linear-0 from-pink-800 to-pink-400;
   transform-origin: bottom center;
 }
+
+#tap-screen-message {
+  @apply absolute text-lg bottom-10 left-1/2 -translate-x-1/2 text-gray-400/30 font-mono;
+}

@@ -10,6 +10,9 @@ const petal: string = /* html */ `
 animatePetals();
 
 app.innerHTML = /* html */ `
+  <div id="tap-screen-message">
+    tap the screen
+  </div>
   <div class="flower">
     <div id="center"></div>
     ${petal.repeat(12)}

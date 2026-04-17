@@ -20,6 +20,7 @@ const screen_tap: Function = (message_count: number): void => {
       .forEach((element: Element): void =>
         element.classList.add("animate-bloom"),
       );
+    document.getElementById("tap-screen-message")?.classList.add("hidden");
   } else if (message_count >= messages.length) {
     return;
   }
@@ -29,10 +30,6 @@ const screen_tap: Function = (message_count: number): void => {
   ) as HTMLDivElement;
 
   messages_div.innerHTML = "";
-
-  // for (let i = 0; i < messages[message_count].length; i++) {
-  //   messages_div.innerHTML += messages[message_count][i];
-  // }
 
   let i: number = 0;
 
