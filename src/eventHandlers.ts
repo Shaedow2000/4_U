@@ -26,7 +26,7 @@ const screen_tap: Function = (): void => {
   writing_message = true;
   message_count++;
 
-  if (message_count >= messages.length - 1) {
+  if (message_count === messages.length - 1) {
     document.getElementById("center")?.classList.add("animate-show");
     document
       .querySelectorAll(".petal")
