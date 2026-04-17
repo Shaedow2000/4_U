@@ -67,18 +67,28 @@ const center_click: Function = (center: HTMLDivElement): void => {
 
   setTimeout((): void => {
     center.style.scale = "0.8";
-  }, 300);
+  }, 200);
 
   setTimeout((): void => {
     center.style.scale = "1";
-  }, 300);
+  }, 400);
 };
 
 const petal_click: Function = (): void => {
   let petals: NodeListOf<HTMLDivElement> = document.querySelectorAll(".petal");
 
   petals.forEach((petal: HTMLDivElement): void => {
-    petal.addEventListener("click", (): void => {});
+    petal.addEventListener("click", (): void => {
+      petal.style.rotate = "5deg";
+
+      setTimeout((): void => {
+        petal.style.rotate = "-5deg";
+      }, 200);
+
+      setTimeout((): void => {
+        petal.style.rotate = "0deg";
+      }, 400);
+    });
   });
 };
 
