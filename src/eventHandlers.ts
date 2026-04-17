@@ -30,7 +30,7 @@ const screen_tap: Function = (message_count: number): void => {
       "last-msg",
     ) as HTMLDivElement;
 
-    setTimeout(() => {
+    setTimeout((): void => {
       let write_last_message_interval: number = setInterval((): void => {
         if (j === last_msg.length - 1) {
           clearInterval(write_last_message_interval);
@@ -63,18 +63,22 @@ const screen_tap: Function = (message_count: number): void => {
 };
 
 const center_click: Function = (center: HTMLDivElement): void => {
-  setTimeout((): void => center.classList.remove("animate-jump"), 350);
-  center.classList.add("animate-jump");
+  center.style.scale = "1.2";
+
+  setTimeout((): void => {
+    center.style.scale = "0.8";
+  }, 300);
+
+  setTimeout((): void => {
+    center.style.scale = "1";
+  }, 300);
 };
 
 const petal_click: Function = (): void => {
   let petals: NodeListOf<HTMLDivElement> = document.querySelectorAll(".petal");
 
   petals.forEach((petal: HTMLDivElement): void => {
-    petal.addEventListener("click", (): void => {
-      petal.classList.add("animate-move");
-      setTimeout((): void => petal.classList.remove("animate-move"), 350);
-    });
+    petal.addEventListener("click", (): void => {});
   });
 };
 

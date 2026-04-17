@@ -5,7 +5,6 @@
 @theme {
   --animate-bloom: bloom 5s forwards;
   --animate-show: show 3s forwards;
-  --animate-jump: jump 2s forwards;
 
   --font-borel: "Borel", cursive;
 
@@ -29,22 +28,11 @@
       transform: scale(1);
       opacity: 1;
     }
-
-    @keyframes jump {
-      0% {
-        transform: scale(0);
-      }
-      25% {
-        transform: scale(1.2);
-      }
-      50% {
-        transform: scale(0.8);
-      }
-      100% {
-        transform: scale(0);
-      }
-    }
   }
+}
+
+* {
+  @apply transition-all duration-300;
 }
 
 #screen {
