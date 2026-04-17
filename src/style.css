@@ -61,3 +61,7 @@
 #tap-screen-message {
   @apply absolute text-lg bottom-10 left-1/2 -translate-x-1/2 text-gray-400/30 font-mono;
 }
+
+#last-msg {
+  @apply absolute bottom-20 left-1/2 -translate-x-1/2 text-2xl text-white;
+}
