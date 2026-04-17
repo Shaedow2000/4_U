@@ -5,7 +5,6 @@ const animatePetals = (): void => {
     .petal:nth-child(${i + 1}) {
       --rot: ${i * 30}deg;
       animation-delay: ${(i + 1) * 0.2}s
-      z-index: ${i + 1}
     }
     `,
   ).join("");

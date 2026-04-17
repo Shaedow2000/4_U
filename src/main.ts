@@ -1,4 +1,9 @@
-import { redirect_to_GH, screen_tap } from "./eventHandlers";
+import {
+  center_click,
+  petal_click,
+  redirect_to_GH,
+  screen_tap,
+} from "./eventHandlers";
 import { animatePetals } from "./petalsAnimations";
 
 const app = document.getElementById("app") as HTMLDivElement;
@@ -6,8 +11,6 @@ const githubSVG: string = `<svg id="github" xmlns="http://www.w3.org/2000/svg" v
 const petal: string = /* html */ `
   <div class="petal"></div>
 `;
-
-animatePetals();
 
 app.innerHTML = /* html */ `
   <div id="tap-screen-message">
@@ -28,5 +31,13 @@ document.getElementById("screen")?.addEventListener("click", (): void => {
   screen_tap(message_count);
   message_count++;
 });
+
+animatePetals();
+
+document.getElementById("center")?.addEventListener("click", (): void => {
+  center_click(document.getElementById("center"));
+});
+
+petal_click();
 
 redirect_to_GH();

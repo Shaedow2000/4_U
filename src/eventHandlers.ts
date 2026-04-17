@@ -62,11 +62,9 @@ const screen_tap: Function = (message_count: number): void => {
   }, 100);
 };
 
-const center_click: Function = (): void => {
-  let center: Element = document.getElementById("center") as HTMLDivElement;
-
-  center.classList.add("animate-jump");
+const center_click: Function = (center: HTMLDivElement): void => {
   setTimeout((): void => center.classList.remove("animate-jump"), 350);
+  center.classList.add("animate-jump");
 };
 
 const petal_click: Function = (): void => {
