@@ -25,11 +25,8 @@ app.innerHTML = /* html */ `
   ${githubSVG}
 `;
 
-let message_count: number = 0;
-
 document.getElementById("screen")?.addEventListener("click", (): void => {
-  screen_tap(message_count);
-  message_count++;
+  screen_tap();
 });
 
 animatePetals();

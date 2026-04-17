@@ -1,4 +1,5 @@
 const messages: string[] = [
+  "",
   "You know",
   "I always wanted to tell you something",
   "But I didin't know how...",
@@ -14,8 +15,18 @@ const redirect_to_GH: Function = (): void => {
   });
 };
 
-const screen_tap: Function = (message_count: number): void => {
-  if (message_count === messages.length - 1) {
+let writing_message: boolean = false;
+let message_count: number = 0;
+
+const screen_tap: Function = (): void => {
+  if (writing_message) {
+    return;
+  }
+
+  writing_message = true;
+  message_count++;
+
+  if (message_count >= messages.length - 1) {
     document.getElementById("center")?.classList.add("animate-show");
     document
       .querySelectorAll(".petal")
@@ -37,12 +48,13 @@ const screen_tap: Function = (message_count: number): void => {
     setTimeout((): void => {
       let write_last_message_interval: number = setInterval((): void => {
         if (j === last_msg.length - 1) {
+          writing_message = false;
           clearInterval(write_last_message_interval);
         }
 
         last_msg_div.innerHTML += last_msg[j];
         j++;
-      }, 125);
+      }, 150);
     }, 4500);
   } else if (message_count >= messages.length) {
     return;
@@ -58,12 +70,13 @@ const screen_tap: Function = (message_count: number): void => {
 
   let write_message_interval: number = setInterval((): void => {
     if (i === messages[message_count].length - 1) {
+      writing_message = false;
       clearInterval(write_message_interval);
     }
 
     messages_div.innerHTML += messages[message_count][i];
     i++;
-  }, 100);
+  }, 120);
 };
 
 const center_click: Function = (center: HTMLDivElement): void => {
