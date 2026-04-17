@@ -79,15 +79,17 @@ const petal_click: Function = (): void => {
 
   petals.forEach((petal: HTMLDivElement): void => {
     petal.addEventListener("click", (): void => {
-      petal.style.rotate = "5deg";
+      petals.forEach((petal: HTMLDivElement): void => {
+        petal.style.rotate = "5deg";
 
-      setTimeout((): void => {
-        petal.style.rotate = "-5deg";
-      }, 200);
+        setTimeout((): void => {
+          petal.style.rotate = "-5deg";
+        }, 200);
 
-      setTimeout((): void => {
-        petal.style.rotate = "0deg";
-      }, 400);
+        setTimeout((): void => {
+          petal.style.rotate = "0deg";
+        }, 400);
+      });
     });
   });
 };
