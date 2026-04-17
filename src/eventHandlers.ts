@@ -62,4 +62,22 @@ const screen_tap: Function = (message_count: number): void => {
   }, 100);
 };
 
-export { redirect_to_GH, screen_tap };
+const center_click: Function = (): void => {
+  let center: Element = document.getElementById("center") as HTMLDivElement;
+
+  center.classList.add("animate-jump");
+  setTimeout((): void => center.classList.remove("animate-jump"), 350);
+};
+
+const petal_click: Function = (): void => {
+  let petals: NodeListOf<HTMLDivElement> = document.querySelectorAll(".petal");
+
+  petals.forEach((petal: HTMLDivElement): void => {
+    petal.addEventListener("click", (): void => {
+      petal.classList.add("animate-move");
+      setTimeout((): void => petal.classList.remove("animate-move"), 350);
+    });
+  });
+};
+
+export { redirect_to_GH, screen_tap, center_click, petal_click };
