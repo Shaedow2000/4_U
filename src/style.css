@@ -32,7 +32,7 @@
 }
 
 * {
-  @apply transition-all duration-300;
+  @apply transition-all duration-250;
 }
 
 #screen {

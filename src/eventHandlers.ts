@@ -3,7 +3,10 @@ const messages: string[] = [
   "You know",
   "I always wanted to tell you something",
   "But I didin't know how...",
-  "I just... reeeeeeally",
+  "I guess you already know it",
+  "But I never told you",
+  "So I just want to tell you...",
+  "that I reeeeeeally",
   "love you <3",
 ];
 
@@ -76,7 +79,7 @@ const screen_tap: Function = (): void => {
 
     messages_div.innerHTML += messages[message_count][i];
     i++;
-  }, 120);
+  }, 100);
 };
 
 const center_click: Function = (center: HTMLDivElement): void => {
@@ -95,14 +98,17 @@ const petal_click: Function = (): void => {
   let petals: NodeListOf<HTMLDivElement> = document.querySelectorAll(".petal");
 
   petals.forEach((petal: HTMLDivElement): void => {
-    petal.style.rotate = "5deg";
+    petal.style.rotate = "8deg";
+    petal.style.scale = "1.06";
 
     setTimeout((): void => {
-      petal.style.rotate = "-5deg";
+      petal.style.rotate = "-8deg";
+      petal.style.scale = "0.96";
     }, 200);
 
     setTimeout((): void => {
       petal.style.rotate = "0deg";
+      petal.style.scale = "1";
     }, 400);
   });
 };

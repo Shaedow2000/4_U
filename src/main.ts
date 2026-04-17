@@ -31,8 +31,10 @@ document.getElementById("screen")?.addEventListener("click", (): void => {
 
 animatePetals();
 
+let center = document.getElementById("center") as HTMLDivElement;
+
 document.getElementById("screen")?.addEventListener("click", (): void => {
-  center_click(document.getElementById("center"));
+  center_click(center);
   petal_click();
 });
 
