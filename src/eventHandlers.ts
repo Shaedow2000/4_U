@@ -22,7 +22,11 @@ const screen_tap: Function = (message_count: number): void => {
       .forEach((element: Element): void =>
         element.classList.add("animate-bloom"),
       );
-    document.getElementById("tap-screen-message")?.classList.add("hidden");
+    let tap_msg = document.getElementById(
+      "tap-screen-message",
+    ) as HTMLDivElement;
+
+    tap_msg.style.bottom = "10px";
 
     let j: number = 0;
 
