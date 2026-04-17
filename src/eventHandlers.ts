@@ -26,18 +26,20 @@ const screen_tap: Function = (message_count: number): void => {
 
     let j: number = 0;
 
-    let write_last_message_interval: number = setInterval((): void => {
-      if (i === last_msg.length - 1) {
-        clearInterval(write_last_message_interval);
-      }
+    let last_msg_div: Element = document.getElementById(
+      "last-msg",
+    ) as HTMLDivElement;
 
-      let last_msg_div: Element = document.getElementById(
-        "last-msg",
-      ) as HTMLDivElement;
+    setTimeout(() => {
+      let write_last_message_interval: number = setInterval((): void => {
+        if (j === last_msg.length - 1) {
+          clearInterval(write_last_message_interval);
+        }
 
-      last_msg_div.innerHTML += last_msg[j];
-      j++;
-    }, 125);
+        last_msg_div.innerHTML += last_msg[j];
+        j++;
+      }, 125);
+    }, 2200);
   } else if (message_count >= messages.length) {
     return;
   }
