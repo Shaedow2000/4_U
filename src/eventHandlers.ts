@@ -63,10 +63,10 @@ const screen_tap: Function = (message_count: number): void => {
 };
 
 const center_click: Function = (center: HTMLDivElement): void => {
-  center.style.scale = "1.2";
+  center.style.scale = "1.1";
 
   setTimeout((): void => {
-    center.style.scale = "0.8";
+    center.style.scale = "0.9";
   }, 200);
 
   setTimeout((): void => {
@@ -78,19 +78,15 @@ const petal_click: Function = (): void => {
   let petals: NodeListOf<HTMLDivElement> = document.querySelectorAll(".petal");
 
   petals.forEach((petal: HTMLDivElement): void => {
-    petal.addEventListener("click", (): void => {
-      petals.forEach((petal: HTMLDivElement): void => {
-        petal.style.rotate = "5deg";
+    petal.style.rotate = "5deg";
 
-        setTimeout((): void => {
-          petal.style.rotate = "-5deg";
-        }, 200);
+    setTimeout((): void => {
+      petal.style.rotate = "-5deg";
+    }, 200);
 
-        setTimeout((): void => {
-          petal.style.rotate = "0deg";
-        }, 400);
-      });
-    });
+    setTimeout((): void => {
+      petal.style.rotate = "0deg";
+    }, 400);
   });
 };
 

@@ -17,7 +17,7 @@ app.innerHTML = /* html */ `
     tap the screen
   </div>
   <div id="last-msg"></div>
-  <div class="flower">
+  <div id="flower">
     <div id="center"></div>
     ${petal.repeat(12)}
   </div>
@@ -34,8 +34,9 @@ document.getElementById("screen")?.addEventListener("click", (): void => {
 
 animatePetals();
 
-document.getElementById("center")?.addEventListener("click", (): void => {
+document.getElementById("screen")?.addEventListener("click", (): void => {
   center_click(document.getElementById("center"));
+  petal_click();
 });
 
 petal_click();
