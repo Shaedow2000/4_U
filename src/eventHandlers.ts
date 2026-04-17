@@ -43,7 +43,7 @@ const screen_tap: Function = (message_count: number): void => {
         last_msg_div.innerHTML += last_msg[j];
         j++;
       }, 125);
-    }, 2200);
+    }, 4500);
   } else if (message_count >= messages.length) {
     return;
   }
